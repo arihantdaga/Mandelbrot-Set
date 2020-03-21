@@ -13,9 +13,8 @@ Try tweaking the values of **MAX_ITERATIONS** and **Colors** in main.js to gener
 
 
 ## TODO
-- [] Options for playing with colors and iteration in the page itself.
-- [] Enabling Infinite zooming into picture, and generating very high reslution image instead of just 500 pixels.
--  
+- [ ] Options for playing with colors and iteration in the page itself.
+- [ ] Enabling Infinite zooming into picture, and generating very high reslution image instead of just 500 pixels.
 
 ## Contributions
 Always welcome with open heart.
