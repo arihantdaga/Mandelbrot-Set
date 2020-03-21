@@ -6,6 +6,7 @@ Those of you who does not know what it is, you can check the wikepedia page here
 
 ## Example
 ![alt-text](./generated/FirstMadelbrot.png "Mandelbrot Set")
+![alt-text](./generated/black_and_white.png "Mandelbrot Set")
 
 ## How to run and experiment
 Remember the nice old index.html ? Just that Open index.html to run in any browser. 
