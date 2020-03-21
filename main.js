@@ -1,10 +1,12 @@
+// Try tweaking these. 
+const MAX_ITERATIONS = 31; // Arbit
+const Colors = [[255,0,0,255], [0,0,0,255], [0,255,0,255],[0,0,255,255],[255,255,0,255]];
+
 const c = document.getElementById("mandlebrotSetWrap")
 const canvasHeight = c.height;
 const canvasWidth = c.width;
 let ctx = c.getContext('2d');
 let canvasData = ctx.getImageData(0, 0, canvasWidth, canvasHeight);
-
-const Colors = [[255,0,0,255], [0,0,0,255], [0,255,0,255],[0,0,255,255],[255,255,0,255]];
 let currentColorIndex = 0;
 let iter = 1;
 
@@ -41,9 +43,9 @@ function drawOneIteration(){
     updateCanvas();
 }
 
-// 31 Iterations is a random choice. You can go ahead with more. 
+// MAX_ITERATIONS Iterations is a random choice. You can go ahead with more. 
 async function DrawMandleBrotSet(){
-    for(let i = 0 ; i < 31; i++){
+    for(let i = 0 ; i < MAX_ITERATIONS; i++){
         requestAnimationFrame(drawOneIteration)
         await delay(100);
     }
