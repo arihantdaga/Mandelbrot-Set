@@ -1,6 +1,7 @@
 // Try tweaking these. 
-const MAX_ITERATIONS = 31; // Arbit
-const Colors = [[255,0,0,255], [0,0,0,255], [0,255,0,255],[0,0,255,255],[255,255,0,255]];
+const MAX_ITERATIONS = 51; // Arbit
+// const Colors = [[255,0,0,255], [0,0,0,255], [0,255,0,255],[0,0,255,255],[255,255,0,255]];
+const Colors = [[255,255,255,255], [0,0,0,255], [255,255,255,255],[255,255,255,255],[255,255,255,255]]
 
 const c = document.getElementById("mandlebrotSetWrap")
 const canvasHeight = c.height;
@@ -51,6 +52,10 @@ async function DrawMandleBrotSet(){
     }
 }
 
+function DwonloadAsImage(){
+    download(c, 'Mandelbrotset.png')
+}
+
 // Keeping track of color
 function currentColor(){
     if (++currentColorIndex >= Colors.length) currentColorIndex = 0
@@ -72,6 +77,33 @@ function updateCanvas(){
     ctx.putImageData(canvasData, 0,0);
 }
 
+/* Canvas Download : refrence : https://codepen.io/joseluisq/pen/mnkLu*/
+function download(canvas, filename) {
+    /// create an "off-screen" anchor tag
+    var lnk = document.createElement('a'), e;
+  
+    /// the key here is to set the download attribute of the a tag
+    lnk.download = filename;
+  
+    /// convert canvas content to data-uri for link. When download
+    /// attribute is set the content pointed to by link will be
+    /// pushed as "download" in HTML5 capable browsers
+    lnk.href = canvas.toDataURL("image/png;base64");
+  
+    /// create a "fake" click-event to trigger the download
+    if (document.createEvent) {
+      e = document.createEvent("MouseEvents");
+      e.initMouseEvent("click", true, true, window,
+                       0, 0, 0, 0, 0, false, false, false,
+                       false, 0, null);
+  
+      lnk.dispatchEvent(e);
+    } else if (lnk.fireEvent) {
+      lnk.fireEvent("onclick");
+    }
+  }
+
+
 // Utility
 async function delay(t) {
     return new Promise(res=> setTimeout(res, t));
@@ -80,7 +112,10 @@ async function delay(t) {
 function Main(){
     document.getElementById("playButton").addEventListener('click', ()=>{
         DrawMandleBrotSet();
-    })
+    });
+    document.getElementById("downloadButton").addEventListener('click', ()=>{
+        DwonloadAsImage();
+    });
 }
 
 window.onload = Main;

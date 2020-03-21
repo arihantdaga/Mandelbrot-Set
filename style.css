@@ -1,0 +1,56 @@
+h1{
+    font-size: 20px;
+    text-align: center;
+    display: block;
+    font-family: cursive;
+
+}
+#mandlebrotSetWrap{
+    border:1px solid #eeeeee;
+    margin: 10px auto 10px auto;
+    width: 500px;
+    height: 500px;
+    display: block;
+}
+.button-common{
+    appearance: none;
+    -webkit-appearance: none;
+    font-weight: bold;
+    padding: 15px;
+    border: 0px none;
+    outline: none;
+    border-radius: 4px;
+    box-shadow: 3px 3px 0px 1px rgba(0,0,0,0.2);
+    font-size: 16px;
+    cursor: pointer;
+}
+#playButton{
+    margin: 10px auto 10px auto;
+    background: #DC374B;
+    color: white;
+}
+#downloadButton{
+    margin: 10px auto 10px auto;
+    background: #1D7973;
+    color: white;
+}
+#colorSelectorWrap{
+    display: block;
+    margin: 30px auto 0px auto;
+}
+#colorSelectorWrap ul{
+    display: block;
+    list-style-type: none;
+    text-align: center;
+}
+#colorSelectorWrap ul li{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background-color: #e3e3e3;
+    border-radius:50%;
+    border:1px solid #dddddd;
+}
+.text-center{
+    text-align: center;
+}
