@@ -12,7 +12,7 @@ Remember the nice old index.html ? Just that Open index.html to run in any brows
 Try tweaking the values of **MAX_ITERATIONS** and **Colors** in main.js to generate different arts. 
 
 
-## TODO
+## Todo
 - [ ] Options for playing with colors and iteration in the page itself.
 - [ ] Enabling Infinite zooming into picture, and generating very high reslution image instead of just 500 pixels.
 
