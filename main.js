@@ -37,11 +37,12 @@ function drawOneIteration(){
             if(isInsideSet(point, iter)){
                 pointInSpace = [i, j];
                 makeAPoint(pointInSpace, color);
+                
             }
         }
     }
-    iter++;   
     updateCanvas();
+    iter++;   
 }
 
 // MAX_ITERATIONS Iterations is a random choice. You can go ahead with more. 
@@ -73,7 +74,6 @@ function makeAPoint(pos, color){
 }
 
 function updateCanvas(){
-    console.log("Updating Canvas");
     ctx.putImageData(canvasData, 0,0);
 }
 
